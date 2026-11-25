@@ -1,5 +1,11 @@
 // Illustrative recipe and grocery data for the Goodfood student prototype.
 // Store prices are estimates and are not retrieved from retailer websites.
+const STARTUP_IDEA = {
+  audience: "Students and anyone trying to save money and budget their weeks.",
+  problem: "The struggle of saving money, knowing what and how to cook good meals, and knowing which ingredients to buy.",
+  solution: "Plan budget-friendly weeks, find good meals to cook, and know which ingredients to buy."
+};
+
 const STORES = {
   nofrills: { name: "No Frills", factor: 0.88, url: "https://www.nofrills.ca/", searchDomain: "nofrills.ca", onlineName: "No Frills", deals: ["Black beans", "Chickpeas", "Brown rice", "Yellow onion", "Eggs"] },
   walmart: { name: "Walmart", factor: 0.92, url: "https://www.walmart.ca/", searchDomain: "walmart.ca", onlineName: "Walmart", deals: ["Chicken breast", "Brown rice", "Baby spinach", "Eggs", "Black beans"] },

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7ef">
+  <meta name="description" content="Learn about GoodFood, an AI-powered meal planning idea for budget-conscious cooks.">
+  <title>About us — GoodFood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Goodfood home">
+      <span class="brand-mark" aria-hidden="true">g.</span>
+      <span>goodfood<span class="brand-period">.</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="about.html" aria-current="page">About us</a>
+      <a href="index.html#recipe-finder">Find a recipe</a>
+      <a href="index.html#planner">Meal planner</a>
+      <a href="index.html#how-it-works">How it works</a>
+    </nav>
+    <a class="header-cta" href="index.html#planner">Plan my week <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main class="about-main">
+    <section class="about-hero" aria-labelledby="about-title">
+      <div class="about-hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A better week starts here</p>
+        <h1 id="about-title">Good food.<br><span>Less guesswork.</span></h1>
+        <p class="about-lead">GoodFood is our idea for an AI-powered meal planning tool that makes it easier to eat well without overspending.</p>
+        <a class="button button-dark" href="index.html#planner">Explore the meal planner <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="about-hero-art" aria-hidden="true">
+        <div class="about-art-sun"></div>
+        <span class="about-food about-food-one">🥑</span>
+        <span class="about-food about-food-two">🍋</span>
+        <span class="about-food about-food-three">🥕</span>
+        <span class="about-food about-food-four">🥬</span>
+        <div class="about-art-note">GOOD<br>THINGS<br>GROW <span>✳</span></div>
+      </div>
+    </section>
+
+    <section class="about-details" aria-labelledby="about-details-title">
+      <div class="about-details-heading">
+        <p class="eyebrow">Why we’re building it</p>
+        <h2 id="about-details-title">A little more confidence at the grocery store.</h2>
+      </div>
+      <div class="about-cards">
+        <article class="about-card">
+          <span class="about-card-number">01</span>
+          <h3>Who it’s for</h3>
+          <p id="about-audience">Students and anyone trying to save money and budget their weeks.</p>
+        </article>
+        <article class="about-card">
+          <span class="about-card-number">02</span>
+          <h3>The problem</h3>
+          <p id="about-problem">The struggle of saving money, knowing what and how to cook good meals, and knowing which ingredients to buy.</p>
+        </article>
+        <article class="about-card">
+          <span class="about-card-number">03</span>
+          <h3>How GoodFood helps</h3>
+          <p id="about-solution">Plan budget-friendly weeks, find good meals to cook, and know which ingredients to buy.</p>
+        </article>
+      </div>
+    </section>
+
+    <p class="about-note">GoodFood is a student prototype. Meal and price data are illustrative estimates.</p>
+  </main>
+
+  <footer class="about-footer">
+    <a class="brand footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true">g.</span><span>goodfood<span class="brand-period">.</span></span></a>
+    <a class="about-back-link" href="index.html">Back to the meal planner <span aria-hidden="true">↗</span></a>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    document.getElementById("about-audience").textContent = STARTUP_IDEA.audience;
+    document.getElementById("about-problem").textContent = STARTUP_IDEA.problem;
+    document.getElementById("about-solution").textContent = STARTUP_IDEA.solution;
+  </script>
+</body>
+</html>
