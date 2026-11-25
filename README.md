@@ -1,4 +1,10 @@
-# AI to Startup — BSAD 281 term project
+# Goodfood — BSAD 281 term project
+
+Goodfood is a student prototype for planning a week of budget-friendly dinners. Visitors can set a weekly grocery budget, household size, dietary preferences, and grocery store to generate a seven-day dinner plan and aisle-sorted shopping list.
+
+Meal and grocery data in `data.js` are illustrative, with estimated prices adjusted by store. This static prototype does **not** read retailer websites, check live prices or availability, or identify a specific nearby branch. A production version would need a permitted retailer data feed or integration and a backend to securely process it.
+
+The rest of this guide covers the original BSAD 281 workflow for previewing and publishing the student project.
 
 You're going to take a startup idea from a sentence to a **live website with its own link**, using an AI assistant (GitHub Copilot) to write the code. You don't need to know how to code. You do need to know what you want, describe it clearly, and check that it works.
 

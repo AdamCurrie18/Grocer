@@ -3,91 +3,157 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YourStartup</title>
-  <meta name="description" content="A student startup prototype for BSAD 281.">
+  <meta name="theme-color" content="#f6f7ef">
+  <meta name="description" content="Plan a week of budget-friendly meals around your diet and grocery store.">
+  <title>Goodfood — your week, well spent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <!-- =========================================================
-       HEADER: logo text + navigation.
-       Each link points to a "view" further down the page (#home, #explore, #about).
-       ========================================================= -->
   <header class="site-header">
-    <a class="brand" href="#home" id="brand-name">YourStartup</a>
-    <nav aria-label="Main">
-      <a href="#home">Home</a>
-      <a href="#explore">Explore</a>
-      <a href="#about">About</a>
+    <a class="brand" href="#home" aria-label="Goodfood home">
+      <span class="brand-mark" aria-hidden="true">g.</span>
+      <span>goodfood<span class="brand-period">.</span></span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#planner">Meal planner</a>
+      <a href="#how-it-works">How it works</a>
     </nav>
+    <a class="header-cta" href="#planner">Plan my week <span aria-hidden="true">↗</span></a>
   </header>
 
-  <main>
-
-    <!-- =======================================================
-         VIEW 1: HOME — what you do, for whom, and why it matters.
-         ======================================================= -->
-    <section id="home" data-view>
-      <div class="hero">
-        <p class="eyebrow">Prototype</p>
-        <h1 id="tagline">One sentence that says what your startup does.</h1>
-        <p class="lead" id="pitch">
-          Who is your customer, what problem do they have, and why is your
-          solution better than what they use today?
-        </p>
-        <a class="button" href="#explore">See it in action</a>
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> A little more good in every grocery run</p>
+        <h1 id="hero-title">Your week,<br>well <span>spent.</span></h1>
+        <p class="hero-description">Tell us what you can spend, what you love to eat, and where you shop. We’ll make the week feel a whole lot easier.</p>
+        <a class="button button-dark" href="#planner">Build my meal plan <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="avatar-stack" aria-hidden="true"><i>🥑</i><i>🍋</i><i>🥕</i></span><span>Good meals. Less guesswork.</span></div>
       </div>
-
-      <div class="steps">
-        <div class="card">
-          <h2>1. Step one</h2>
-          <p>Describe the first thing a customer does.</p>
+      <div class="hero-art" aria-label="A colorful bowl of fresh vegetables">
+        <div class="art-sun"></div>
+        <div class="art-note"><span class="note-sparkle">✳</span> made for your real life</div>
+        <div class="food-bowl" aria-hidden="true">
+          <div class="bowl-rim"></div>
+          <span class="food food-avocado">🥑</span>
+          <span class="food food-tomato">🍅</span>
+          <span class="food food-carrot">🥕</span>
+          <span class="food food-leaf">🥬</span>
+          <span class="food food-lemon">🍋</span>
+          <span class="food food-pepper">🫑</span>
+          <span class="food food-berry">🫐</span>
+          <div class="bowl-base"></div>
         </div>
-        <div class="card">
-          <h2>2. Step two</h2>
-          <p>Describe what happens next.</p>
-        </div>
-        <div class="card">
-          <h2>3. Step three</h2>
-          <p>Describe the result the customer gets.</p>
-        </div>
+        <div class="art-sticker"><span>GOOD<br>THINGS<br>GROW</span><b>✳</b></div>
+        <div class="art-caption">A fresh start to<br>a better week.</div>
       </div>
     </section>
 
-    <!-- =======================================================
-         VIEW 2: EXPLORE — a list built from the fake data in data.js.
-         ======================================================= -->
-    <section id="explore" data-view hidden>
-      <h1>Explore</h1>
-      <p class="muted">These examples are fake. They come from <code>data.js</code>.</p>
+    <section class="planner-section" id="planner" aria-labelledby="planner-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Your week starts here</p>
+          <h2 id="planner-title">Let’s make a plan.</h2>
+        </div>
+        <p class="section-aside">A few details in, a lot less to figure out.</p>
+      </div>
 
-      <label class="search">
-        <span>Search</span>
-        <input type="search" id="search-box" placeholder="Type to filter…">
-      </label>
+      <form class="planner-form" id="planner-form">
+        <div class="form-topline">
+          <span class="step-number">01</span>
+          <span>Make it yours</span>
+          <span class="form-time">Takes about 30 seconds</span>
+        </div>
+        <div class="form-grid">
+          <label class="field" for="budget">
+            <span class="field-label">Weekly grocery budget</span>
+            <span class="input-wrap"><span class="input-prefix">$</span><input id="budget" name="budget" type="number" min="25" max="500" step="5" value="100" required><span class="input-suffix">CAD / week</span></span>
+            <span class="field-hint">For the meals in this plan</span>
+          </label>
+          <label class="field" for="people">
+            <span class="field-label">Cooking for</span>
+            <span class="select-wrap"><select id="people" name="people"><option value="1">1 person</option><option value="2" selected>2 people</option><option value="3">3 people</option><option value="4">4 people</option><option value="5">5 people</option><option value="6">6 people</option></select></span>
+            <span class="field-hint">We’ll scale the shopping list</span>
+          </label>
+          <label class="field" for="store">
+            <span class="field-label">Your grocery store</span>
+            <span class="select-wrap"><select id="store" name="store"><option value="nofrills">No Frills</option><option value="walmart">Walmart</option><option value="superstore" selected>Atlantic Superstore</option><option value="sobeys">Sobeys</option></select></span>
+            <span class="field-hint">Shopping in <input id="location" name="location" type="text" value="Halifax, NS" aria-label="Town or postal code"></span>
+          </label>
+        </div>
+        <fieldset class="diet-fieldset">
+          <legend>Any way you like to eat?</legend>
+          <p class="field-hint">Choose all that apply, or leave these for a bit of everything.</p>
+          <div class="diet-options">
+            <label class="diet-option"><input type="checkbox" name="diet" value="vegetarian"><span>🥬&nbsp; Vegetarian</span></label>
+            <label class="diet-option"><input type="checkbox" name="diet" value="vegan"><span>🌱&nbsp; Vegan</span></label>
+            <label class="diet-option"><input type="checkbox" name="diet" value="gluten-free"><span>🌾&nbsp; Gluten-free</span></label>
+            <label class="diet-option"><input type="checkbox" name="diet" value="dairy-free"><span>🥛&nbsp; Dairy-free</span></label>
+            <label class="diet-option"><input type="checkbox" name="diet" value="high-protein"><span>💪&nbsp; High protein</span></label>
+          </div>
+        </fieldset>
+        <div class="form-bottom">
+          <p><span class="tiny-leaf">✳</span> Flexible meals, everyday ingredients, no food waste guilt.</p>
+          <button class="button button-dark generate-button" type="submit">Build my week <span aria-hidden="true">↗</span></button>
+        </div>
+      </form>
 
-      <p class="muted" id="saved-count"></p>
-      <div class="grid" id="listing-grid"></div>
-      <p class="empty" id="empty-message" hidden>Nothing matches your search.</p>
+      <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+
+      <section class="results" id="results" aria-labelledby="results-title" hidden>
+        <div class="results-header">
+          <div>
+            <p class="eyebrow">Your good week is ready</p>
+            <h2 id="results-title">A week of feel-good meals.</h2>
+            <p class="results-subtitle" id="results-subtitle"></p>
+          </div>
+          <button class="button button-light" id="regenerate-button" type="button">Shuffle my week <span aria-hidden="true">⤨</span></button>
+        </div>
+        <div class="results-grid">
+          <div class="meals-panel">
+            <div class="panel-heading"><h3>This week’s menu</h3><span class="menu-count" id="menu-count"></span></div>
+            <div class="meal-list" id="meal-list"></div>
+          </div>
+          <aside class="shopping-panel" aria-labelledby="shopping-title">
+            <div class="shopping-heading">
+              <span class="bag-icon" aria-hidden="true">↗</span>
+              <div><p class="eyebrow">One easy trip</p><h3 id="shopping-title">Your shopping list</h3></div>
+            </div>
+            <p class="store-line" id="store-line"></p>
+            <div class="basket-total"><span>Estimated basket</span><strong id="basket-total"></strong></div>
+            <p class="budget-status" id="budget-status"></p>
+            <div class="shopping-list" id="shopping-list"></div>
+            <div class="list-actions">
+              <button class="button button-dark copy-button" id="copy-button" type="button">Copy shopping list <span aria-hidden="true">⧉</span></button>
+              <a class="store-link" id="store-link" href="#" target="_blank" rel="noopener noreferrer">Visit store website <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="price-disclaimer">Prices are illustrative estimates, not live store listings. Check your store’s website for current prices and availability.</p>
+          </aside>
+        </div>
+      </section>
     </section>
 
-    <!-- =======================================================
-         VIEW 3: ABOUT — your team and your story.
-         ======================================================= -->
-    <section id="about" data-view hidden>
-      <h1>About us</h1>
-      <p>Tell the story of why your team started this company.</p>
-      <p>Use first names only, or no names at all — this site is public.</p>
+    <section class="how-section" id="how-it-works" aria-labelledby="how-title">
+      <div class="how-intro">
+        <p class="eyebrow">Good food, made simpler</p>
+        <h2 id="how-title">Less planning.<br><span>More living.</span></h2>
+      </div>
+      <div class="how-steps">
+        <article class="how-step"><span>01</span><h3>Pick your priorities</h3><p>Set a budget, choose your store, and tell us what works for your table.</p></article>
+        <article class="how-step"><span>02</span><h3>Get a week of ideas</h3><p>We’ll put together easy recipes and an ingredient list that makes sense.</p></article>
+        <article class="how-step"><span>03</span><h3>Shop smarter</h3><p>Take one organized list to the store. Get back to the good stuff.</p></article>
+      </div>
     </section>
-
   </main>
 
-  <!-- Keep this footer. Your site must say it is a student project. -->
   <footer class="site-footer">
-    <p>Student prototype for BSAD 281 at St. Francis Xavier University. Not a real company — all data is fictional.</p>
+    <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">g.</span><span>goodfood<span class="brand-period">.</span></span></a>
+    <p>Student prototype for BSAD 281 at St. Francis Xavier University. Meal and price data are illustrative; no live store data is connected.</p>
   </footer>
 
-  <!-- Scripts load in this order: data first, then the code that uses it. -->
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
