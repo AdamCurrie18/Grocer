@@ -29,11 +29,7 @@ key prompts:
 2: add a link to a youtube tutorial on how to make it to each of the recipes.
 what worked: the app came up with recipes for each day
 what didnt work: they were repetitive, I asked it to be more creative and generate more options.
-Commit message: 
-
-Session 3 - Nov 25th - Adam
-- Added a top-page Subscription option for a hypothetical Goodfood Plus $3/week plan.
-- The confirmation opens Plus settings for macro targets, pantry reuse, ingredient reuse, and weekly deal planning.
+Commit message: Goodfood is a student prototype for planning a week of budget-friendly dinners. Visitors can set a weekly grocery budget, household size, dietary preferences, and grocery store to generate a seven-day dinner plan, swap individual meals for dietary-compatible alternatives, view expandable recipes with YouTube tutorial links, and get an aisle-sorted shopping list with estimated line prices.
 
 Session 4 - Nov 23rd - Adam
 goal: add an option to save/use ingredients that user already has
@@ -41,6 +37,14 @@ key prompts:
 1: add a new bar on the site where users can enter ingredients they already own and be given recipes that use those ingredients. 
 what worked: the area to enter ingredients worked
 what didn't work: it was positioned at the very bottom, so i moved it to the top. 
+commit message:
+
+
+Session 3 - Nov 25th - Adam
+- Added a top-page Subscription option for a hypothetical Goodfood Plus $3/week plan.
+- The confirmation opens Plus settings for macro targets, pantry reuse, ingredient reuse, and weekly deal planning.
+
+
 
 ## Things that broke (running list)
 
