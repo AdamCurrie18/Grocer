@@ -9,6 +9,8 @@ Your prototype shows *what* the product looks like. This document explains *why*
 - **Solution:** What does your product do differently or better?
 - **Revenue:** How does the company make money?
 
+In this prototype, the optional Goodfood Plus upgrade is presented as a $3/week subscription. The premium prototype features are ingredient reuse across the seven-meal plan, pantry inventory subtraction, illustrated weekly grocery-deal preferences, and personalized calorie and protein targets. Real billing and accounts would require a secure subscription provider and backend.
+
 ## 2. Where IT creates value
 
 Which parts of the value chain does your product change, and how? Which course concepts apply (e.g. scale, distribution channels, differentiation, data, switching costs)?

@@ -1,8 +1,8 @@
 # Goodfood — BSAD 281 term project
 
-Goodfood is a student prototype for planning a week of budget-friendly dinners. Visitors can set a weekly grocery budget, household size, dietary preferences, and grocery store to generate a seven-day dinner plan and aisle-sorted shopping list.
+Goodfood is a student prototype for planning a week of budget-friendly dinners. Visitors can set a weekly grocery budget, household size, dietary preferences, and grocery store to generate a seven-day dinner plan, swap individual meals for dietary-compatible alternatives, view expandable recipes with YouTube tutorial links, and get an aisle-sorted shopping list with estimated line prices. A recipe finder also searches the sample recipe collection by dish or ingredients and links to available cooking videos or YouTube search results.
 
-Meal and grocery data in `data.js` are illustrative, with estimated prices adjusted by store. This static prototype does **not** read retailer websites, check live prices or availability, or identify a specific nearby branch. A production version would need a permitted retailer data feed or integration and a backend to securely process it.
+Meal and grocery data in `data.js` are illustrative, with estimated prices adjusted by store. This static prototype does **not** read retailer websites, check live prices or availability, or identify a specific nearby branch. Shopping-list “Find” links open web searches restricted to the selected retailer's domain; they do not add items to a cart. A production version would need a permitted retailer data feed or integration and a backend to securely process it.
 
 The rest of this guide covers the original BSAD 281 workflow for previewing and publishing the student project.
 

@@ -2,8 +2,8 @@
 
 Keep this up to date as you go — a few lines per work session is enough. It's much harder to reconstruct at the end.
 
-**Team name:**
-**Startup name:**
+**Adam Currie:**
+**GoodFood:**
 **Live site link:**
 
 ---
@@ -12,17 +12,35 @@ Keep this up to date as you go — a few lines per work session is enough. It's 
 
 Copy this block for each session.
 
-### Session — [date] — driver: [first name]
+ Session 1 — Nov 20th — driver: Adam
 
-- **Goal for this session:**
+- **get the frame work in:**
 - **Key prompts we gave Copilot** (paste the important ones):
-  1.
-  2.
-- **What worked:**
-- **What broke, and how we fixed it:**
-- **Committed?** yes / no — commit message:
+  1. Hello, I would like to make a website that acts as a meal planner / shopping list for students and people who want to save money. make me a friendly looking site with a budget, # of people eating, and preffered grocery store dropdown bars. 
+  2. Make it so when the user enters these requirements, the site generates a shopping list with estimated prices next to each item, and a total price at the top.
+- **What worked: the budget, # of people, and grocery store drop downs worked. 
+- **What broke, and how we fixed it: the estimated prices were not very consistent. I prompted the Ai to make it so it adds a link to the real thing on the grocery stores website so users can see the true price.
+- **Committed?** yes / no — commit message: Goodfood is a student prototype for planning a week of budget-friendly dinners. Visitors can set a weekly grocery budget, household size, dietary preferences, and grocery store to generate a seven-day dinner plan and aisle-sorted shopping list.
 
----
+Session 2 - Nov 21st - Adam
+goal: offer more features 
+key prompts: 
+1: add an option to view a recipe for each day of the week that uses the ingredients purchased. 
+2: add a link to a youtube tutorial on how to make it to each of the recipes.
+what worked: the app came up with recipes for each day
+what didnt work: they were repetitive, I asked it to be more creative and generate more options.
+Commit message: 
+
+Session 3 - Nov 25th - Adam
+- Added a top-page Subscription option for a hypothetical Goodfood Plus $3/week plan.
+- The confirmation opens Plus settings for macro targets, pantry reuse, ingredient reuse, and weekly deal planning.
+
+Session 4 - Nov 23rd - Adam
+goal: add an option to save/use ingredients that user already has
+key prompts:
+1: add a new bar on the site where users can enter ingredients they already own and be given recipes that use those ingredients. 
+what worked: the area to enter ingredients worked
+what didn't work: it was positioned at the very bottom, so i moved it to the top. 
 
 ## Things that broke (running list)
 

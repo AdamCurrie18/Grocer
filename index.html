@@ -18,11 +18,37 @@
       <span>goodfood<span class="brand-period">.</span></span>
     </a>
     <nav aria-label="Main navigation">
+      <a href="#recipe-finder">Find a recipe</a>
       <a href="#planner">Meal planner</a>
       <a href="#how-it-works">How it works</a>
     </nav>
-    <a class="header-cta" href="#planner">Plan my week <span aria-hidden="true">↗</span></a>
+    <div class="header-actions">
+      <button class="subscription-button" id="header-subscription" type="button">
+        <span aria-hidden="true">✦</span> Subscription
+      </button>
+      <a class="header-cta" href="#planner">Plan my week <span aria-hidden="true">↗</span></a>
+    </div>
   </header>
+
+  <dialog class="subscription-modal" id="subscription-modal" aria-labelledby="subscription-title">
+    <form method="dialog">
+      <button class="subscription-close" type="submit" value="cancel" aria-label="Close subscription options">×</button>
+      <p class="eyebrow">Goodfood Plus</p>
+      <h2 id="subscription-title">Make every week work harder.</h2>
+      <p class="subscription-price"><strong>$3</strong> / week <span>Hypothetical weekly charge</span></p>
+      <ul class="subscription-features">
+        <li><span>↻</span> Reuse ingredients across meals to cut waste and costs</li>
+        <li><span>◎</span> Set personalized calorie and protein targets</li>
+        <li><span>✦</span> Build around weekly grocery deals</li>
+        <li><span>▦</span> Add pantry inventory and skip what you already own</li>
+      </ul>
+      <div class="subscription-actions">
+        <button class="subscription-cancel" type="submit" value="cancel">Not now</button>
+        <button class="subscription-accept" id="subscription-accept" type="button">Accept $3/week</button>
+      </div>
+      <p class="subscription-disclaimer">Preview only: no real payment is collected.</p>
+    </form>
+  </dialog>
 
   <main id="home">
     <section class="hero" aria-labelledby="hero-title">
@@ -30,7 +56,10 @@
         <p class="eyebrow"><span class="eyebrow-dot"></span> A little more good in every grocery run</p>
         <h1 id="hero-title">Your week,<br>well <span>spent.</span></h1>
         <p class="hero-description">Tell us what you can spend, what you love to eat, and where you shop. We’ll make the week feel a whole lot easier.</p>
-        <a class="button button-dark" href="#planner">Build my meal plan <span aria-hidden="true">↓</span></a>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#planner">Build my meal plan <span aria-hidden="true">↓</span></a>
+          <a class="button hero-secondary" href="#recipe-finder">Find a specific meal <span aria-hidden="true">↗</span></a>
+        </div>
         <div class="hero-note"><span class="avatar-stack" aria-hidden="true"><i>🥑</i><i>🍋</i><i>🥕</i></span><span>Good meals. Less guesswork.</span></div>
       </div>
       <div class="hero-art" aria-label="A colorful bowl of fresh vegetables">
@@ -52,6 +81,29 @@
       </div>
     </section>
 
+    <section class="recipe-finder" id="recipe-finder" aria-labelledby="recipe-finder-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Have something in mind?</p>
+          <h2 id="recipe-finder-title">Find a meal for what you have.</h2>
+        </div>
+        <p class="section-aside">Search by dish or ingredients and find a recipe to try.</p>
+      </div>
+      <form class="recipe-search-form" id="recipe-search-form">
+        <label for="recipe-query">What would you like to cook, or what ingredients do you have?</label>
+        <div class="recipe-search-controls">
+          <input id="recipe-query" name="query" type="search" maxlength="120" placeholder="e.g. chickpeas, spinach or tacos" required>
+          <button class="button button-dark" type="submit">Find recipes <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="field-hint">Separate ingredients with commas. We’ll show recipes from our sample collection that match.</p>
+      </form>
+      <p class="recipe-search-message" id="recipe-search-message" role="status" aria-live="polite"></p>
+      <div class="recipe-search-results" id="recipe-search-results" aria-live="polite" hidden>
+        <h3 id="recipe-results-heading"></h3>
+        <div class="recipe-search-list" id="recipe-search-list"></div>
+      </div>
+    </section>
+
     <section class="planner-section" id="planner" aria-labelledby="planner-title">
       <div class="section-heading">
         <div>
@@ -66,6 +118,45 @@
           <span class="step-number">01</span>
           <span>Make it yours</span>
           <span class="form-time">Takes about 30 seconds</span>
+        </div>
+        <section class="premium-panel" id="premium-panel" aria-labelledby="premium-title">
+          <div class="premium-copy">
+            <p class="premium-badge">Goodfood Plus</p>
+            <div>
+              <h3 id="premium-title">Make every week work a little harder.</h3>
+              <p>Reuse ingredients, use pantry items, follow grocery deals, and set calorie and protein targets.</p>
+            </div>
+          </div>
+          <button class="premium-button" id="premium-toggle" type="button">Try Plus · $3/week</button>
+        </section>
+        <div class="premium-controls" id="premium-controls" hidden>
+          <div class="premium-controls-heading">
+            <span>Goodfood Plus settings</span>
+            <span class="premium-active">Active in this preview</span>
+          </div>
+          <div class="premium-grid">
+            <label class="field" for="goal">
+              <span class="field-label">Nutrition goal</span>
+              <span class="select-wrap"><select id="goal" name="goal"><option value="maintain" selected>Maintain weight</option><option value="lose">Lose weight</option><option value="build">Build muscle</option></select></span>
+            </label>
+            <label class="field" for="calorie-target">
+              <span class="field-label">Daily calorie target</span>
+              <span class="input-wrap"><input id="calorie-target" name="calories" type="number" min="1200" max="5000" step="50" value="2000"><span class="input-suffix">kcal / day</span></span>
+            </label>
+            <label class="field" for="protein-target">
+              <span class="field-label">Daily protein target</span>
+              <span class="input-wrap"><input id="protein-target" name="protein" type="number" min="40" max="300" step="5" value="110"><span class="input-suffix">g / day</span></span>
+            </label>
+            <label class="field field-wide" for="pantry">
+              <span class="field-label">Pantry inventory</span>
+              <input class="text-field" id="pantry" name="pantry" type="text" placeholder="Rice, eggs, olive oil, black beans">
+              <span class="field-hint">Separate items with commas. Matching ingredients will not be added to the list.</span>
+            </label>
+            <label class="premium-toggle-row" for="use-deals">
+              <input id="use-deals" name="useDeals" type="checkbox" checked>
+              <span><strong>Plan around weekly deals</strong><small>Favor participating ingredients from this store.</small></span>
+            </label>
+          </div>
         </div>
         <div class="form-grid">
           <label class="field" for="budget">
@@ -109,6 +200,7 @@
             <p class="eyebrow">Your good week is ready</p>
             <h2 id="results-title">A week of feel-good meals.</h2>
             <p class="results-subtitle" id="results-subtitle"></p>
+            <div class="premium-plan-summary" id="premium-plan-summary" hidden></div>
           </div>
           <button class="button button-light" id="regenerate-button" type="button">Shuffle my week <span aria-hidden="true">⤨</span></button>
         </div>
@@ -128,9 +220,9 @@
             <div class="shopping-list" id="shopping-list"></div>
             <div class="list-actions">
               <button class="button button-dark copy-button" id="copy-button" type="button">Copy shopping list <span aria-hidden="true">⧉</span></button>
-              <a class="store-link" id="store-link" href="#" target="_blank" rel="noopener noreferrer">Visit store website <span aria-hidden="true">↗</span></a>
+              <a class="store-link" id="store-link" href="#" target="_blank" rel="noopener noreferrer">Browse store online <span aria-hidden="true">↗</span></a>
             </div>
-            <p class="price-disclaimer">Prices are illustrative estimates, not live store listings. Check your store’s website for current prices and availability.</p>
+            <p class="price-disclaimer">Prices are illustrative estimates, not live listings. “Find” opens a web search limited to this retailer’s domain; it won’t add items to your cart.</p>
           </aside>
         </div>
       </section>
